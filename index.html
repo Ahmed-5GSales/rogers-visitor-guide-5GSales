@@ -4,32 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rogers Visitor Guide</title>
-
-<!-- PWA Meta Tags -->
 <meta name="theme-color" content="#24514a">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Rogers Guide">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="description" content="Best dining and hotels near 114 W Elm St, Rogers AR">
-
-<!-- PWA Manifest -->
 <link rel="manifest" href="manifest.json">
-
-<!-- iOS Icon (inline SVG favicon) -->
 <link rel="apple-touch-icon" href="icon-192.png">
-
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
 <style>
-  :root {
-    --bg:#fff7ef; --card:#ffffff; --ink:#2b211b; --muted:#6c5b52; --accent:#b25b38; --accent2:#24514a; --soft:#f1dfd0;
-  }
+  :root { --bg:#fff7ef; --card:#ffffff; --ink:#2b211b; --muted:#6c5b52; --accent:#b25b38; --accent2:#24514a; --soft:#f1dfd0; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif; background:linear-gradient(135deg,var(--bg),#fff); color:var(--ink); }
-  header { padding:40px 18px 28px; text-align:center; background: radial-gradient(circle at top left, #f5cfb8 0%, transparent 40%), linear-gradient(120deg,#fff7ef,#fdfdfb); border-bottom:1px solid var(--soft); }
-  h1 { margin:0; font-family:'Playfair Display',Georgia,serif; font-size: clamp(26px, 5vw, 52px); letter-spacing:-1px; color:var(--ink); }
+  body { margin:0; font-family:'DM Sans',ui-sans-serif,system-ui,sans-serif; background:linear-gradient(135deg,var(--bg),#fff); color:var(--ink); }
+  header { padding:40px 18px 28px; text-align:center; background:radial-gradient(circle at top left,#f5cfb8 0%,transparent 40%),linear-gradient(120deg,#fff7ef,#fdfdfb); border-bottom:1px solid var(--soft); }
+  h1 { margin:0; font-family:'Playfair Display',Georgia,serif; font-size:clamp(26px,5vw,52px); letter-spacing:-1px; color:var(--ink); }
   .sub { margin:10px auto 0; max-width:680px; color:var(--muted); font-size:16px; line-height:1.5; }
   .office-badge { display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:10px 18px; border-radius:999px; background:#fff; box-shadow:0 8px 25px rgba(0,0,0,.09); font-weight:700; font-size:15px; }
   .office-badge::before { content:'📍'; }
@@ -40,8 +29,8 @@
   .wrap { max-width:1140px; margin:0 auto; padding:20px 16px; }
   .controls { display:grid; grid-template-columns:1fr; gap:12px; margin:10px 0 16px; }
   @media(min-width:720px){ .controls { grid-template-columns:1.6fr .9fr .9fr; } }
-  input, select { width:100%; border:1.5px solid #dac8ba; border-radius:14px; padding:13px 16px; font-size:15px; font-family:'DM Sans',sans-serif; background:white; color:var(--ink); outline:none; transition:border-color .2s; }
-  input:focus, select:focus { border-color:var(--accent2); }
+  input,select { width:100%; border:1.5px solid #dac8ba; border-radius:14px; padding:13px 16px; font-size:15px; font-family:'DM Sans',sans-serif; background:white; color:var(--ink); outline:none; transition:border-color .2s; }
+  input:focus,select:focus { border-color:var(--accent2); }
   .chips { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
   .chip { border:0; border-radius:999px; padding:10px 16px; background:#fff; color:var(--ink); box-shadow:0 4px 12px rgba(0,0,0,.08); font-weight:700; font-size:14px; font-family:'DM Sans',sans-serif; cursor:pointer; transition:all .2s; }
   .chip:hover { transform:translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.12); }
@@ -51,7 +40,7 @@
   .grid { display:grid; grid-template-columns:1fr; gap:16px; }
   @media(min-width:640px){ .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media(min-width:1040px){ .grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
-  .card { background:var(--card); border:1px solid #eadbce; border-radius:22px; padding:20px; box-shadow:0 10px 30px rgba(66,38,21,.07); display:flex; flex-direction:column; gap:10px; transition:transform .2s, box-shadow .2s; }
+  .card { background:var(--card); border:1px solid #eadbce; border-radius:22px; padding:20px; box-shadow:0 10px 30px rgba(66,38,21,.07); display:flex; flex-direction:column; gap:10px; transition:transform .2s,box-shadow .2s; }
   .card:hover { transform:translateY(-3px); box-shadow:0 18px 45px rgba(66,38,21,.13); }
   .card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
   .badge { padding:6px 12px; border-radius:999px; font-size:12px; font-weight:800; white-space:nowrap; letter-spacing:.3px; text-transform:uppercase; }
@@ -75,8 +64,6 @@
 </style>
 </head>
 <body>
-
-<!-- Install to Home Screen banner (shows automatically on eligible devices) -->
 <div class="install-banner" id="installBanner">
   <span>📲 Add to your home screen for quick access</span>
   <div style="display:flex;gap:8px;align-items:center;">
@@ -84,16 +71,14 @@
     <button class="install-dismiss" id="dismissBtn">✕</button>
   </div>
 </div>
-
 <header>
   <h1>Best Dining + Hotels Near 114 W Elm</h1>
   <p class="sub">A visitor guide for downtown Rogers, AR — client lunches, team dinners, coffee runs, after-work drinks, and hotel picks.</p>
   <div class="office-badge">114 W Elm St, Rogers, AR 72756</div>
 </header>
-
 <main class="wrap">
   <div class="controls">
-    <input id="search" placeholder="Search: sushi, hotel, coffee, client dinner…" />
+    <input id="search" placeholder="Search: sushi, hotel, coffee, pizza, BBQ…" />
     <select id="typeFilter">
       <option value="All">Dining + Hotels</option>
       <option value="Dining">Dining only</option>
@@ -111,6 +96,7 @@
     <button class="chip" data-chip="Coffee">Coffee</button>
     <button class="chip" data-chip="Casual">Casual</button>
     <button class="chip" data-chip="Cocktails">Cocktails</button>
+    <button class="chip" data-chip="Breakfast">Breakfast</button>
     <button class="chip" data-chip="Extended">Extended stay</button>
     <button class="chip" data-chip="Value">Value</button>
   </div>
@@ -118,31 +104,61 @@
   <section class="grid" id="grid"></section>
   <p class="tip">💡 Tap "Map" for directions from wherever your guest is. Call ahead for current hours, reservations, and availability.</p>
 </main>
-
 <script>
 const places = [
-  {"type":"Dining","name":"Tusk & Trotter American Brasserie","category":"Client lunch / dinner","address":"106 W Elm St, Rogers, AR 72756","distance":"~0.1 mi","price":"$$-$$$","bestFor":"Upscale-but-comfortable client meals, brunch, cocktails","notes":"Chef-driven brasserie with Southern comfort and global flair. Very convenient to 114 W Elm.","phone":"(479) 372-6208"},
-  {"type":"Dining","name":"House 1830","category":"Southeast Asian","address":"106 W Elm St, Rogers, AR 72756","distance":"~0.1 mi","price":"$$-$$$","bestFor":"Flavorful team lunch or dinner","notes":"Thai, Vietnamese, and Lao-inspired dishes; same block convenience.","phone":"(479) 278-7016"},
-  {"type":"Dining","name":"Blu DTR","category":"Seafood / sushi","address":"214 W Elm St, Rogers, AR 72756","distance":"~0.1 mi","price":"$$$","bestFor":"Nicer client dinner, seafood, sushi, cocktails","notes":"Mediterranean/seafood spot with shareables and fresh seafood focus.","phone":"(479) 270-1128"},
-  {"type":"Dining","name":"Onyx Coffee Lab – Rogers HQ","category":"Coffee / quick meeting","address":"101 E Walnut St, Rogers, AR 72756","distance":"~0.2 mi","price":"$-$$","bestFor":"Coffee meetings, remote work, visitors killing time","notes":"Beautiful coffee HQ/roastery in downtown Rogers.","phone":"(479) 899-6750"},
+  // ── COFFEE ──────────────────────────────────────────────
+  {"type":"Dining","name":"Iron Horse Coffee Company","category":"Coffee / sandwiches","address":"220 S 1st St, Rogers, AR 72756","distance":"~0.2 mi","price":"$","bestFor":"Coffee meetings, sandwiches, remote work, casual hangout","notes":"Downtown Rogers institution since 1998. Cozy loft upstairs, great sandwiches, soups, bagels, and espresso. One of the most beloved local coffee spots in NWA.","phone":"(479) 631-9977"},
+  {"type":"Dining","name":"Onyx Coffee Lab – Rogers HQ","category":"Coffee / roastery","address":"101 E Walnut St, Rogers, AR 72756","distance":"~0.2 mi","price":"$-$$","bestFor":"Specialty coffee meetings, remote work, impressing visitors","notes":"World-class specialty coffee roastery and café. Beautiful space and exceptional espresso — great for visitors who appreciate high-end coffee.","phone":"(479) 899-6750"},
+
+  // ── UPSCALE DINING ────────────────────────────────────────
+  {"type":"Dining","name":"Tusk & Trotter American Brasserie","category":"Client lunch / dinner","address":"106 W Elm St, Rogers, AR 72756","distance":"~0.1 mi","price":"$$-$$$","bestFor":"Upscale client meals, brunch, cocktails","notes":"Chef-driven brasserie with Southern comfort and global flair. Craft burgers, house-cured meats, seasonal specials. Very convenient to 114 W Elm.","phone":"(479) 372-6208"},
+  {"type":"Dining","name":"House 1830","category":"Southeast Asian","address":"106 W Elm St, Rogers, AR 72756","distance":"~0.1 mi","price":"$$-$$$","bestFor":"Impressive client dinner, foodie team lunch","notes":"Thai, Vietnamese, and Lao-inspired dishes by Chef Binh. Same block convenience. Chef personally welcomes first-time guests. Highly regarded in NWA dining scene.","phone":"(479) 278-7016"},
+  {"type":"Dining","name":"Blu DTR","category":"Seafood / sushi","address":"214 W Elm St, Rogers, AR 72756","distance":"~0.1 mi","price":"$$$","bestFor":"Nicer client dinner, fresh seafood, sushi, cocktails","notes":"Mediterranean/seafood spot sourcing fish daily through their own Blu Fresh Fish Market. Amazing sushi and shareables.","phone":"(479) 270-1128"},
+  {"type":"Dining","name":"Heirloom at The 1907","category":"Fine dining / tasting menu","address":"101 E Walnut St #301, Rogers, AR 72756","distance":"~0.2 mi","price":"$$$$","bestFor":"Special occasion client dinner, unique NWA experience","notes":"Intimate 14-seat tasting menu restaurant open 4 nights/week. 7–10 courses by chef/owner Jason Paul. Hidden inside The 1907 building. Reservations required — book well ahead.","phone":"(479) 936-8083"},
+  {"type":"Dining","name":"Table on 6th","category":"Upscale American","address":"Downtown Rogers area","distance":"~0.3 mi","price":"$$$","bestFor":"Client dinner, upscale group dining","notes":"Locally praised upscale dining option in downtown Rogers. One of the top-rated spots on Yelp for downtown dining.","phone":""},
+
+  // ── COCKTAILS / BARS ──────────────────────────────────────
   {"type":"Dining","name":"The Five6","category":"Cocktails / shareables","address":"124 S 1st St, Rogers, AR 72756","distance":"~0.2 mi","price":"$$","bestFor":"After-work drinks, small plates, casual nice dinner","notes":"Upscale restaurant/bar with creative cocktails and shareable dishes.","phone":"(479) 202-5556"},
-  {"type":"Dining","name":"Yeyo's Mezcaleria y Taqueria","category":"Mexican / cocktails","address":"101 E Walnut St, Rogers, AR 72756","distance":"~0.2 mi","price":"$$","bestFor":"Fun client dinner, tacos, tequila/mezcal","notes":"Upscale Mexican street-inspired menu in The 1907 building.","phone":"(479) 372-4700"},
-  {"type":"Dining","name":"OZ Smokehouse","category":"BBQ","address":"113 W Walnut St, Rogers, AR 72756","distance":"~0.2 mi","price":"$-$$","bestFor":"Casual team lunch, visitors wanting Arkansas BBQ","notes":"BBQ sandwiches, tacos, brunch, plus gluten-free/vegetarian options.","phone":"(479) 270-1764"},
-  {"type":"Dining","name":"Parkside Public","category":"Burgers / casual","address":"112 S 1st St, Rogers, AR 72756","distance":"~0.2 mi","price":"$-$$","bestFor":"Casual lunch, burgers, beer","notes":"Creative burgers and pub-style bites in downtown Rogers.","phone":"(479) 636-7275"},
-  {"type":"Dining","name":"The Rail - A Pizza Company","category":"Pizza / casual","address":"218 S 1st St, Rogers, AR 72756","distance":"~0.3 mi","price":"$-$$","bestFor":"Easy group lunch, casual team dinner","notes":"Neighborhood pizza, wings, and craft beer.","phone":"(479) 633-8808"},
-  {"type":"Dining","name":"Havana Tropical Grill","category":"Cuban","address":"203 N 2nd St, Rogers, AR 72756","distance":"~0.4 mi","price":"$-$$","bestFor":"Casual Cuban lunch/dinner","notes":"Family-owned Cuban food with fresh ingredients and friendly service.","phone":"(479) 899-6334"},
-  {"type":"Dining","name":"Ozark Beer Company","category":"Brewery","address":"109 N Arkansas St, Rogers, AR 72756","distance":"~0.4 mi","price":"$-$$","bestFor":"After-work local beer, informal visitor hangout","notes":"Downtown brewery/taproom; food truck calendar and BYO food allowed.","phone":"(479) 636-2337"},
-  {"type":"Dining","name":"Gelatissimo Downtown Rogers","category":"Dessert","address":"226 S 1st St, Rogers, AR 72756","distance":"~0.3 mi","price":"$","bestFor":"Sweet stop after lunch/dinner","notes":"Gelato and sorbet; good easy treat for visitors or team outings.","phone":"(479) 405-4030"},
-  {"type":"Hotel","name":"Hotel Avail Rogers, Tapestry Collection by Hilton","category":"Closest polished hotel","address":"4100 S Pinnacle Hills Pkwy, Rogers, AR 72758","distance":"~5 mi","price":"$$$","bestFor":"Executives, clients, polished stay near convention area","notes":"Highly rated newer hotel option near Pinnacle Hills/Rogers Convention Center.","phone":""},
-  {"type":"Hotel","name":"Embassy Suites Northwest Arkansas Hotel, Spa & Convention Center","category":"Meetings / full service","address":"3303 S Pinnacle Hills Pkwy, Rogers, AR 72758","distance":"~5 mi","price":"$$$","bestFor":"Large meetings, suites, convention/spa amenities","notes":"Full-service hotel connected to convention activity; strong for corporate travelers.","phone":"(479) 254-8400"},
+  {"type":"Dining","name":"Pinky Swear","category":"Speakeasy / cocktails","address":"Downtown Rogers (inside The 1907)","distance":"~0.2 mi","price":"$$-$$$","bestFor":"Unique after-work drinks, impressing clients, special occasions","notes":"Cozy speakeasy-style bar with elevated mixology complementing Heirloom. Beautiful cocktails in a moody, intimate setting. A real conversation starter for visitors.","phone":""},
+  {"type":"Dining","name":"Kilroy Public House","category":"Irish pub / cocktails","address":"224 S 2nd St, Rogers, AR 72756","distance":"~0.2 mi","price":"$$","bestFor":"Casual after-work drinks, pub food, relaxed client meetup","notes":"Irish-inspired pub in a cozy basement setting. Hearty comfort food, cocktails, and a relaxed neighborhood vibe.","phone":""},
+  {"type":"Dining","name":"Levi's Gastrolounge & Lowbar","category":"Gastrolounge / bar","address":"Downtown Rogers","distance":"~0.3 mi","price":"$$","bestFor":"Gourmet bar bites, creative cocktails, casual evening out","notes":"Gastrolounge with gourmet bar food and a full service bar. Trendy spot in the downtown Rogers scene.","phone":""},
+
+  // ── MEXICAN ───────────────────────────────────────────────
+  {"type":"Dining","name":"Yeyo's Mezcaleria y Taqueria","category":"Mexican / cocktails","address":"101 E Walnut St, Rogers, AR 72756","distance":"~0.2 mi","price":"$$","bestFor":"Fun client dinner, tacos, tequila/mezcal","notes":"Upscale Mexican street-inspired menu in The 1907 building. Bold flavors, impressive mezcal and tequila selection.","phone":"(479) 372-4700"},
+  {"type":"Dining","name":"Casa Alejo","category":"Tex-Mex","address":"120 S 2nd St, Rogers, AR 72756","distance":"~0.2 mi","price":"$-$$","bestFor":"Casual Mexican lunch, local favorite, group friendly","notes":"Authentic Tex-Mex with a vibrant atmosphere. Known for Pollo Alejo, Pizzabirria, and seasonal drinks. Local hotspot for warm, friendly service.","phone":"(479) 372-6080"},
+  {"type":"Dining","name":"Las Palmas","category":"Mexican","address":"200 W Poplar St, Rogers, AR 72756","distance":"~0.3 mi","price":"$-$$","bestFor":"Casual Mexican lunch/dinner, longtime local staple","notes":"Long-standing Mexican restaurant in historic downtown Rogers. Large menu with chicken, steak, and seafood dishes.","phone":"(479) 986-9622"},
+
+  // ── BBQ / AMERICAN ────────────────────────────────────────
+  {"type":"Dining","name":"OZ Smokehouse","category":"BBQ","address":"113 W Walnut St, Rogers, AR 72756","distance":"~0.2 mi","price":"$-$$","bestFor":"Casual team lunch, visitors wanting Arkansas BBQ","notes":"BBQ sandwiches, tacos, brunch, plus gluten-free/vegetarian options. Great casual pick for groups.","phone":"(479) 270-1764"},
+  {"type":"Dining","name":"Parkside Public","category":"Burgers / casual","address":"112 S 1st St, Rogers, AR 72756","distance":"~0.2 mi","price":"$-$$","bestFor":"Casual lunch, creative burgers, cold beer","notes":"Creative burgers and pub-style bites in downtown Rogers. Easy and reliable for a quick team lunch.","phone":"(479) 636-7275"},
+  {"type":"Dining","name":"Wesner's Grill","category":"Classic diner / American","address":"Downtown Rogers","distance":"~0.3 mi","price":"$","bestFor":"Budget lunch, classic American comfort food, longtime local staple","notes":"The oldest restaurant in Benton County. Classic diner-style setting with hearty American comfort food. A Rogers institution.","phone":""},
+  {"type":"Dining","name":"Lucy's Diner","category":"Diner / breakfast","address":"Downtown Rogers","distance":"~0.3 mi","price":"$","bestFor":"Breakfast anytime, 24/7 option, budget-friendly","notes":"Open 24/7 with breakfast served anytime. A beloved Rogers spot that has served NWA for many years. Great for early arrivals or late nights.","phone":""},
+
+  // ── PIZZA ─────────────────────────────────────────────────
+  {"type":"Dining","name":"The Rail - A Pizza Company","category":"Pizza / casual","address":"218 S 1st St, Rogers, AR 72756","distance":"~0.3 mi","price":"$-$$","bestFor":"Easy group lunch, casual team dinner","notes":"Neighborhood pizza, wings, and craft beer. Reliable and easy for groups.","phone":"(479) 633-8808"},
+  {"type":"Dining","name":"Flashback Pizza & Milkshakes","category":"Pizza / fun / retro","address":"105 S 3rd St, Rogers, AR 72756","distance":"~0.3 mi","price":"$-$$","bestFor":"Fun group outing, families, team lunch with a twist","notes":"80s/90s retro-themed spot with pizza, thick milkshakes, arcade games, and board games. Energetic and fun — great for a different kind of team lunch.","phone":"(479) 372-6013"},
+
+  // ── INTERNATIONAL ─────────────────────────────────────────
+  {"type":"Dining","name":"Havana Tropical Grill","category":"Cuban","address":"203 N 2nd St, Rogers, AR 72756","distance":"~0.4 mi","price":"$-$$","bestFor":"Casual Cuban lunch/dinner, unique NWA option","notes":"Family-owned Cuban food with fresh ingredients and friendly service. A refreshing change of pace for out-of-town visitors.","phone":"(479) 899-6334"},
+  {"type":"Dining","name":"Chuo Izakaya","category":"Japanese / small plates","address":"3939 S Grand Ave Suite D102, Rogers, AR 72758","distance":"~3 mi","price":"$$-$$$","bestFor":"Unique client dinner, Japanese small plates, sake","notes":"Modern Japanese tavern experience inspired by the chef's life in Kobe. Sharable small plates, cocktails, sake, and beer in a warm social setting.","phone":"(479) 899-6999"},
+
+  // ── BREWERY / FOOD COURT ──────────────────────────────────
+  {"type":"Dining","name":"Ozark Beer Company","category":"Brewery / taproom","address":"109 N Arkansas St, Rogers, AR 72756","distance":"~0.4 mi","price":"$-$$","bestFor":"After-work local beer, informal visitor hangout","notes":"Downtown brewery/taproom with food truck calendar and BYO food allowed. Great rotating tap selection.","phone":"(479) 636-2337"},
+  {"type":"Dining","name":"City Pump / Botanical Food Court","category":"Food trucks / outdoor","address":"623 W Walnut St, Rogers, AR 72756","distance":"~0.5 mi","price":"$","bestFor":"Casual outdoor lunch, food truck variety, after-work hangout","notes":"Hip gas station turned food truck court with multiple trucks (hibachi, grill, more), indoor/outdoor seating, and local craft beer and wine. Great group option with variety.","phone":"(479) 202-5507"},
+
+  // ── DESSERT ───────────────────────────────────────────────
+  {"type":"Dining","name":"Gelatissimo Downtown Rogers","category":"Dessert / gelato","address":"226 S 1st St, Rogers, AR 72756","distance":"~0.3 mi","price":"$","bestFor":"Sweet stop after lunch/dinner, team treat","notes":"Authentic artisan gelato crafted fresh daily. 45+ flavors with vegan, dairy-free, and gluten-free options.","phone":"(479) 405-4030"},
+
+  // ── HOTELS ────────────────────────────────────────────────
+  {"type":"Hotel","name":"Hotel Avail Rogers, Tapestry Collection by Hilton","category":"Closest polished hotel","address":"4100 S Pinnacle Hills Pkwy, Rogers, AR 72758","distance":"~5 mi","price":"$$$","bestFor":"Executives, clients, polished stay — rooftop Oak Steakhouse on-site","notes":"Highly rated newer hotel. Features Oak Steakhouse rooftop restaurant on-site — great for client dinners without leaving the hotel.","phone":""},
+  {"type":"Hotel","name":"Embassy Suites NWA Hotel, Spa & Convention Center","category":"Meetings / full service","address":"3303 S Pinnacle Hills Pkwy, Rogers, AR 72758","distance":"~5 mi","price":"$$$","bestFor":"Large meetings, suites, convention/spa amenities","notes":"Full-service hotel connected to convention activity. Strong for corporate travelers needing meeting space.","phone":"(479) 254-8400"},
   {"type":"Hotel","name":"Aloft Rogers-Bentonville","category":"Modern / social","address":"1103 S 52nd St, Rogers, AR 72758","distance":"~5 mi","price":"$$","bestFor":"Younger/modern business travelers, informal stays","notes":"Modern Marriott option in the Pinnacle Hills/Bentonville-Rogers area.","phone":""},
-  {"type":"Hotel","name":"Hyatt House Bentonville/Rogers","category":"Extended stay","address":"1803 S 52nd St, Rogers, AR 72758","distance":"~5 mi","price":"$$","bestFor":"Longer stays, kitchenette-style comfort","notes":"Good choice for longer business visits and practical amenities.","phone":""},
+  {"type":"Hotel","name":"Hyatt House Bentonville/Rogers","category":"Extended stay","address":"1803 S 52nd St, Rogers, AR 72758","distance":"~5 mi","price":"$$","bestFor":"Longer stays, kitchenette-style comfort","notes":"Good choice for longer business visits with practical amenities and kitchenette setup.","phone":""},
   {"type":"Hotel","name":"Courtyard by Marriott Bentonville Rogers Promenade","category":"Business reliable","address":"4201 W Green Acres Rd, Rogers, AR 72758","distance":"~6 mi","price":"$$","bestFor":"Simple business travel near shopping/restaurants","notes":"Reliable Marriott option near Promenade and business corridor.","phone":""},
-  {"type":"Hotel","name":"Hampton Inn Bentonville/Rogers","category":"Best value reliable","address":"4501 W Walnut St, Rogers, AR 72756","distance":"~5 mi","price":"$$","bestFor":"Budget-conscious but still professional guests","notes":"Popular, reliable business-travel option in Rogers/Bentonville area.","phone":""},
+  {"type":"Hotel","name":"Hampton Inn Bentonville/Rogers","category":"Best value reliable","address":"4501 W Walnut St, Rogers, AR 72756","distance":"~5 mi","price":"$$","bestFor":"Budget-conscious but still professional guests","notes":"Popular, reliable business-travel option in the Rogers/Bentonville area.","phone":""},
   {"type":"Hotel","name":"Homewood Suites by Hilton Bentonville-Rogers","category":"Extended stay / suites","address":"4302 W Walnut St, Rogers, AR 72756","distance":"~5 mi","price":"$$","bestFor":"Multi-night stays, suite setup","notes":"Suite-style Hilton option for longer work trips.","phone":""}
 ];
 
-// --- Render ---
 const grid = document.getElementById('grid');
 const searchEl = document.getElementById('search');
 const typeEl = document.getElementById('typeFilter');
@@ -163,9 +179,10 @@ function priceNum(p) { return (p||'').length; }
 function matchChip(p) {
   const t = Object.values(p).join(' ').toLowerCase();
   if (activeChip === 'All') return true;
-  if (activeChip === 'Client') return /client|executive|upscale|polished|meeting|nicer/.test(t);
+  if (activeChip === 'Client') return /client|executive|upscale|polished|meeting|nicer|tasting|special occasion/.test(t);
   if (activeChip === 'Extended') return /extended|longer|suite|multi-night|kitchenette/.test(t);
   if (activeChip === 'Value') return /value|budget|reliable|budget-conscious/.test(t);
+  if (activeChip === 'Breakfast') return /breakfast|diner|brunch|24.7|bagel/.test(t);
   return t.includes(activeChip.toLowerCase());
 }
 
@@ -207,38 +224,16 @@ function render() {
 }
 render();
 
-// --- PWA: Service Worker ---
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(() => {});
-}
+if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js').catch(()=>{}); }
 
-// --- PWA: Install Banner ---
 let deferredPrompt;
 const banner = document.getElementById('installBanner');
 const installBtn = document.getElementById('installBtn');
 const dismissBtn = document.getElementById('dismissBtn');
-
-window.addEventListener('beforeinstallprompt', e => {
-  e.preventDefault();
-  deferredPrompt = e;
-  banner.classList.add('show');
-});
-
-installBtn.addEventListener('click', async () => {
-  if (!deferredPrompt) return;
-  deferredPrompt.prompt();
-  const { outcome } = await deferredPrompt.userChoice;
-  deferredPrompt = null;
-  banner.classList.remove('show');
-});
-
-dismissBtn.addEventListener('click', () => {
-  banner.classList.remove('show');
-});
-
-window.addEventListener('appinstalled', () => {
-  banner.classList.remove('show');
-});
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; banner.classList.add('show'); });
+installBtn.addEventListener('click', async () => { if (!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt = null; banner.classList.remove('show'); });
+dismissBtn.addEventListener('click', () => { banner.classList.remove('show'); });
+window.addEventListener('appinstalled', () => { banner.classList.remove('show'); });
 </script>
 </body>
 </html>
